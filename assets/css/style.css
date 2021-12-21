@@ -1,0 +1,60 @@
+.scoreTimerBar{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    color: skyblue;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.scoreTimerBar a:visited {
+    color: skyblue;
+}
+.scoreTimerBar a:active , .scoreTimerBar a:hover{
+    color: rgb(0, 183, 255);
+    cursor: pointer;
+}
+
+#time{
+    margin: 1rem;
+}
+
+#intro{
+    display: flex;
+    background-color: royalblue;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5rem;
+}
+#intro h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: white;
+}
+#intro p{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: skyblue;
+    margin-top: 2em;
+    margin-left: 3em; 
+    margin-right: 3em;
+}
+#btnStart{
+    background-color: whitesmoke;
+    color: skyblue;
+    padding: 1rem;
+    border-radius: 5rem;
+    margin-top: 10rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#btnStart a:visited{
+    color: skyblue;
+}
+#btnStart a:active, #btnStart a:hover{
+    color: rgb(0, 183, 255);
+}
