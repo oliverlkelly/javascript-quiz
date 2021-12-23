@@ -1,0 +1,21 @@
+.quizArea{
+    display: flex;
+    justify-content: center;
+}
+.quizBlock{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: royalblue;
+    width: 60vw;
+    height: 75vh;
+    margin-top: 10vh;
+    border-radius: 5rem;
+}
+.quizAnswersBlock{
+    background-color: white;
+    width: 50vw;
+    height: 40vh;
+    margin-bottom: 5vh;
+    border-radius: 5rem;
+}
