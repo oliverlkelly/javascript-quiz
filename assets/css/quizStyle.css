@@ -40,14 +40,16 @@
     row-gap: 1rem;
     column-gap: 1rem;
 }
-.quizAnswers li{
+.quizAnswers .btn{
     background-color: royalblue;
     color: white;
     border-radius: 2rem;
     padding: 2rem;
     text-align: center;
+    border: none;
+
 }
-.quizAnswers li:hover{
+.quizAnswers .btn:active{
     background-color: rebeccapurple;
     
 }

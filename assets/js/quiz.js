@@ -5,25 +5,31 @@ var timer;
 var timerCount = 60;
 var lost = false;
 var score;
+var answered;
 
-for(i=0; i<questions.length; i++){
-    placeQuestion(questions[0]);
-    
-}
+
+placeQuestion(questions[0]);
+
+// for(i=0; i<questions.length; i++){
+//     answered = false;
+//     placeQuestion(questions[i]);
+// }
 
 
 function placeQuestion(question) {
-    var p = document.createElement("p");
-    p.append(question.question);
-    questionElement.appendChild(p);
-    var correct = document.createElement("li");
-    var answerTwo = document.createElement("li");
-    var answerThree = document.createElement("li");
-    var answerFour = document.createElement("li");
-    correct.classList.add("true");
-    answerTwo.classList.add("false");
-    answerThree.classList.add("false");
-    answerFour.classList.add("false");
+    questionElement.innerText = question.question;
+    var correct = document.createElement("button");
+    var answerTwo = document.createElement("button");
+    var answerThree = document.createElement("button");
+    var answerFour = document.createElement("button");
+    correct.classList.add("btn");
+    correct.dataset.correct = true;
+    answerTwo.classList.add("btn");
+    answerTwo.dataset.correct = false;
+    answerThree.classList.add("btn");
+    answerThree.dataset.correct = false;
+    answerFour.classList.add("btn");
+    answerFour.dataset.correct = false;
     correct.append(question.answer);
     answerTwo.append(question.iAnswer1);
     answerThree.append(question.iAnswer2);
@@ -36,6 +42,11 @@ function placeQuestion(question) {
     for (var i = answerElement.children.length; i >= 0; i--) {
         answerElement.appendChild(answerElement.children[Math.random() * i | 0]);
     }
+}
+
+function resetQuizBlock(){
+    questionElement.remove();
+    answerElement.remove();
 }
 
 function timer() {

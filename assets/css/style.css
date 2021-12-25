@@ -23,7 +23,6 @@
     display: flex;
     background-color: royalblue;
     width: 50vw;
-    height: 50vh;
     margin: auto;
     align-items: center;
     flex-direction: column;
@@ -48,7 +47,7 @@
     color: skyblue;
     padding: 1rem;
     border-radius: 5rem;
-    margin-top: 10rem;
+    margin: 1rem;
     font-size: 2rem;
     font-weight: bold;
 }
