@@ -8,8 +8,7 @@ var score;
 
 quiz();
 
-function quiz() {
-    //startTimer();
+function placeQuestion() {
     var answerOne = document.createElement("li");
     var answerTwo = document.createElement("li");
     var answerThree = document.createElement("li");
