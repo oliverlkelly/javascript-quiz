@@ -7,16 +7,11 @@ var lost = false;
 var score;
 var answered;
 
-
 placeQuestion(questions[0]);
-
-// for(i=0; i<questions.length; i++){
-//     answered = false;
-//     placeQuestion(questions[i]);
-// }
 
 
 function placeQuestion(question) {
+    resetQuizBlock();
     questionElement.innerText = question.question;
     var correct = document.createElement("button");
     var answerTwo = document.createElement("button");
@@ -24,12 +19,16 @@ function placeQuestion(question) {
     var answerFour = document.createElement("button");
     correct.classList.add("btn");
     correct.dataset.correct = true;
+    correct.addEventListener("click", selectAnswer);
     answerTwo.classList.add("btn");
     answerTwo.dataset.correct = false;
+    answerTwo.addEventListener("click", selectAnswer);
     answerThree.classList.add("btn");
     answerThree.dataset.correct = false;
+    answerThree.addEventListener("click", selectAnswer);
     answerFour.classList.add("btn");
     answerFour.dataset.correct = false;
+    answerFour.addEventListener("click", selectAnswer);
     correct.append(question.answer);
     answerTwo.append(question.iAnswer1);
     answerThree.append(question.iAnswer2);
@@ -44,9 +43,15 @@ function placeQuestion(question) {
     }
 }
 
+function selectAnswer(selected){
+    
+}
+
 function resetQuizBlock(){
-    questionElement.remove();
-    answerElement.remove();
+    questionElement.removeChild(questionElement.firstChild);
+    while (answerElement.firstChild) {
+        answerElement.removeChild(answerElement.firstChild);
+      }
 }
 
 function timer() {
@@ -59,4 +64,8 @@ function timer() {
         lost = true;
       }
     }, 1000);
+  }
+
+  function waitAnswer(){
+
   }
