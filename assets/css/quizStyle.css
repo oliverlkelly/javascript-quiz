@@ -4,13 +4,22 @@
 }
 .quizBlock{
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     background-color: royalblue;
     width: 60vw;
     height: 75vh;
     margin-top: 10vh;
     border-radius: 5rem;
+}
+.quizQuestion{
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5vh;
 }
 .quizAnswersBlock{
     display: flex;
@@ -36,4 +45,9 @@
     color: white;
     border-radius: 2rem;
     padding: 2rem;
+    text-align: center;
+}
+.quizAnswers li:hover{
+    background-color: rebeccapurple;
+    
 }
