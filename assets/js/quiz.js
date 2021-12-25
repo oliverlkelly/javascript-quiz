@@ -1,11 +1,27 @@
 var timerElement = document.querySelector("#time");
+var answerElement = document.querySelector(".quizAnswers");
+var questionElement = document.querySelector(".quizQuestion");
 var timer;
 var timerCount = 60;
 var lost = false;
 var score;
 
-function quiz() {
+quiz();
 
+function quiz() {
+    //startTimer();
+    var answerOne = document.createElement("li");
+    var answerTwo = document.createElement("li");
+    var answerThree = document.createElement("li");
+    var answerFour = document.createElement("li");
+    answerOne.append("This is an Answer");
+    answerTwo.append("This is another Answer");
+    answerThree.append("This is an Answer");
+    answerFour.append("This is an Answer");
+    answerElement.appendChild(answerOne);
+    answerElement.appendChild(answerTwo);
+    answerElement.appendChild(answerThree);
+    answerElement.appendChild(answerFour);
 }
 
 function startTimer() {
