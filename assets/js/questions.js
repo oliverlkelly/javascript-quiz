@@ -1,5 +1,6 @@
 var questions = [];
 
+
 class createQuestion {
     constructor(question, answer, iAnswer1, iAnswer2, iAnswer3) {
         this.question = question;
@@ -18,7 +19,7 @@ questions.push(
         '<js>',
         '<scripting>'
     )
-)
+);
 questions.push(
     new createQuestion(
         'How do you write "Hello World" in an alert box?',
@@ -27,7 +28,7 @@ questions.push(
         'alertBox("Hello World");',
         'msg("Hello World");'
     )
-)
+);
 questions.push(
     new createQuestion(
         'How do you create a function in JavaScript?',
@@ -36,7 +37,7 @@ questions.push(
         'function = myFunction()',
         'function{ myFunction() }'
     )
-)
+);
 questions.push(
     new createQuestion(
         'How do you call a function named "myFunction"?',
@@ -45,7 +46,7 @@ questions.push(
         'call function myFunction()',
         'myFunction.call()'
     )
-)
+);
 questions.push(
     new createQuestion(
         'How to write an IF statement in JavaScript?',
@@ -54,7 +55,7 @@ questions.push(
         'if i = 5',
         'if i = 5 then'
     )
-)
+);
 questions.push(
     new createQuestion(
         'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
@@ -63,4 +64,4 @@ questions.push(
         'if i =! 5 then',
         'if (i <> 5)'
     )
-)
+);
