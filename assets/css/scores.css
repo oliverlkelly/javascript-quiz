@@ -1,0 +1,32 @@
+.scores{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+.scoresBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: royalblue;
+    width: 60vw;
+    min-height: 75vh;
+    margin-top: 10vh;
+    border-radius: 5rem;
+}
+.btn{
+    background-color: royalblue;
+    color: white;
+    border: 0.5rem solid white;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}

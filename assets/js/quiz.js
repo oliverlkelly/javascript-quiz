@@ -133,6 +133,19 @@ function submitScore(){
 
 function submitVal(){
   var name = document.getElementById("textInput").value;
-  localStorage.setItem(name, timerCount);
+  var score = [name, timerCount];
+  var scores;
+  if(localStorage.getItem("scores") === null){
+    localStorage.setItem("scores", JSON.stringify([score]));
+    scores = JSON.parse(localStorage.getItem("scores"));
+  }
+  else{
+    scores = JSON.parse(localStorage.getItem("scores"));
+    scores.push(score);
+  }
+  if(scores.length > 1){
+    scores.sort((a,b) => b[1] - a[1]);
+  }
+  localStorage.setItem("scores", JSON.stringify(scores));
   window.location = "../html/scoreboard.html";
 }
