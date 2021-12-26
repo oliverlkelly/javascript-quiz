@@ -3,7 +3,6 @@ var answerElement = document.querySelector(".quizAnswers");
 var questionElement = document.querySelector(".quizQuestion");
 var timerCount = 60;
 var score;
-var answered;
 var index = 0;
 
 startQuiz();
@@ -72,6 +71,7 @@ function timer() {
     }, 1000);
 }
 
+//Show loss screen
 function lose(){
   timerCount = 0;
   timerElement.textContent = timerCount;
@@ -88,12 +88,18 @@ function lose(){
   scores.append("View Scores");
   answerElement.appendChild(scores);
 }
+
+//take user to index
 function home(){
   window.location = "../../index.html";
 }
+
+//take user to scores page
 function viewScores(){
   window.location = "../html/scoreboard.html";
 }
+
+//deterines next question or win
 function nextQuestion(){
   if(index === questions.length - 1){
     clearInterval(timer);
@@ -104,4 +110,29 @@ function nextQuestion(){
     resetQuizBlock();
     placeQuestion(questions[index]);
   }
+}
+
+function submitScore(){
+  resetQuizBlock();
+  questionElement.innerText = "Your score is " + timerCount + "! Enter your name to submit to the scoreboard:";
+  var input = document.createElement("input");
+  input.setAttribute('type', 'text');
+  input.setAttribute('id', 'textInput');
+  questionElement.appendChild(input);
+  var submit = document.createElement("button");
+  submit.classList.add("btn");
+  submit.addEventListener("click", submitVal);
+  submit.append("Submit");
+  answerElement.appendChild(submit);
+  var tryAgain = document.createElement("button");
+  tryAgain.classList.add("btn");
+  tryAgain.addEventListener("click", home);
+  tryAgain.append("Try Again");
+  answerElement.appendChild(tryAgain);
+}
+
+function submitVal(){
+  var name = document.getElementById("textInput").value;
+  localStorage.setItem(name, timerCount);
+  window.location = "../html/scoreboard.html";
 }

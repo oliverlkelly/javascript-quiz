@@ -1,5 +1,6 @@
 var questions = [];
 
+//Creates array of questions for use by code
 
 class createQuestion {
     constructor(question, answer, iAnswer1, iAnswer2, iAnswer3) {
